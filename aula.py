@@ -33,6 +33,40 @@ def main(page: ft.Page):
     ]
     page.add(*elementos)
     page.update()
+
+    #Propriedades da tela
+    page.window_always_on_top =True
+    page.window_title_bar_hidden = True
+    page.window_frameless = False
+    page.window_full_screen = False
+    page.window_height = 300
+    page.window_max_height = 900
+    page.window_min_height = 900
+    page.window_width = 600
+    page.window_max_width = 900
+    page.window_min_width = 200
+    page.window_resizable = True
+    #page.window_opacity = 0.5
+    #page.window_draggable = True
+
+    page.window_top = 100
+    page.window_left = 100
+    page.window_movable = True
+    page.window_prevent_close = True
+    page.window_progress_bar = 1
+
+    #def window_event(e):
+    #   # match e.data:
+    #   #     case 'moved':
+    #   #         print("Window moved")
+
+    #   if e.data == 'moved':
+    #       print("Window moved")
+           
+
+    #page.on_window_event = window_event
+
+    page.update()
 ft.app(target = main)
 
 
